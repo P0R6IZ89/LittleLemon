@@ -11,3 +11,6 @@ class Menu(models.Model):
     title = models.CharField(max_length=255)
     price = models.DecimalField(decimal_places=2, max_digits=6)
     inventory = models.IntegerField(null=False)
+
+    def get_item(self):
+        return f'{self.title} : {str(self.price)}'

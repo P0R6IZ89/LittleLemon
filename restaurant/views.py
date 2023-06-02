@@ -4,12 +4,19 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED, HTTP_204_NO_CONTENT
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView, DestroyAPIView
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import IsAuthenticated
+
+# @api_view()
+# @permission_classes([IsAuthenticated])
+# def example():
+#     pass
 
 from .models import Booking, Menu
 from .serializers import UserSerializer, BookingSerializer, MenuSerializer
 
 
 class BookingViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
 
