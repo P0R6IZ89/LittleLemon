@@ -11,8 +11,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
-    path('restaurant/', include('restaurant.urls')),
-    path('restaurant/booking/', include(router.urls)),
+    path('api/', include('restaurant.urls')),
+    path('api/booking/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api-token-auth/', obtain_auth_token),
 ]
