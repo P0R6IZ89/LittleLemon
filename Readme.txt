@@ -1,8 +1,7 @@
-Thank you for reviewing my project!
+This repository was created when I was learning backend development during the Meta Back-end Development online course. 
+Feel free to take a look at the code :)
 
-# Enviroment
-
-- I am using "venv"
+# Enviroment: VENV
 
 - To activate run:
     "source env/bin/activate"
